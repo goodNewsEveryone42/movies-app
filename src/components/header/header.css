@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.navbar-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-form-wrapper {
+  width: 60%;
+}
+
+.navbar-form {
+  width: 400px;
+}
+
+.form-inline .form-control .navbar-input {
+  width: 100%;
+}
