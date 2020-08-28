@@ -1,0 +1,14 @@
+.movies-list__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movies-list__card {
+  width: 250px;
+  height: 320px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: #000000;
+}

@@ -9,15 +9,14 @@ export default class ImdbService {
       axios.get(`http://www.omdbapi.com/?i=${id}${this._key}`)
     );
     const response = await Promise.all(requests);
-    // const movies = this._serializeResponse(response);
-    console.log(response[0].data);
-    return response[0].data;
+    const movies = this._serializeResponse(response);
+    console.log(movies);
+    return movies;
   }
 
   _serializeResponse = (response) => {
     return response.reduce((acc, response) => {
-      acc[response.imdbID] = response;
-      return acc;
-    }, {});
+      return [...acc, { ...response.data }];
+    }, []);
   };
 }

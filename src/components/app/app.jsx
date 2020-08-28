@@ -15,13 +15,11 @@ const App = () => {
     imdbService.getResource().then((res) => setMovies(res));
   }, []);
 
-  console.log(movies);
-
   return (
     <div className="app-container">
       <div></div>
       <Header />
-      <MoviesList />
+      <MoviesList movieList={movies} />
       <PaginationTemlate />
     </div>
   );
