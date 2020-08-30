@@ -30,7 +30,7 @@
 
 @media screen and (min-width: 1200px) {
   .navbar-wrapper {
-    width: 90%;
+    width: 74%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
