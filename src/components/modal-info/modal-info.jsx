@@ -52,7 +52,7 @@ const ModalInfo = (props) => {
                 <p className="modal-window__title">{Title}</p>
                 <p className="modal-window__description">{Plot}</p>
                 <div className="modal-window__items-info">{elementsInfo}</div>
-                <table>
+                <table className="modal-window__table">
                   <tbody>{elementsTable}</tbody>
                 </table>
               </div>

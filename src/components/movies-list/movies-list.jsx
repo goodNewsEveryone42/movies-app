@@ -3,7 +3,8 @@ import MoviesListCards from "../movies-list-card";
 
 import "./movies-list.css";
 
-const MoviesList = ({ movieList }) => {
+const MoviesList = (props) => {
+  const { movieList } = props;
   const renderItem = () => {
     return (
       movieList &&

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../header";
 import MoviesList from "../movies-list";
-import PaginationTemlate from "../pagination";
 import ImdbService from "../../service/imdb-service";
 
 import "./app.css";
@@ -20,7 +19,6 @@ const App = () => {
       <div></div>
       <Header />
       <MoviesList movieList={movies} />
-      <PaginationTemlate />
     </div>
   );
 };

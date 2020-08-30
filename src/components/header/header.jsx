@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Navbar className="navbar">
       <div className="navbar-wrapper">
-        <Navbar.Brand href="#">Movies App</Navbar.Brand>
+        <p className="navbar-wrapper__title">Movies App</p>
         <div className="navbar-form-wrapper">
           <Form className="navbar-form">
             <Form.Input
