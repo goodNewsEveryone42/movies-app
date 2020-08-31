@@ -38,12 +38,17 @@ const ModalInfo = (props) => {
     <React.Fragment>
       {show && (
         <div className="modal-window">
-          <button className="modal-window__btn" type="button" onClick={close}>
-            X
-          </button>
           <div className="modal-window__opacity"></div>
           <div className="modal-window__container">
-            <div className="modal-window__header"></div>
+            <div className="modal-window__header">
+              <button
+                className="modal-window__btn"
+                type="button"
+                onClick={close}
+              >
+                X
+              </button>
+            </div>
             <div className="modal-window__wrap">
               <div className="modal-window__img-container">
                 <img src={Poster} />

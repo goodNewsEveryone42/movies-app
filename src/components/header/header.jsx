@@ -3,7 +3,8 @@ import { Navbar, Form } from "bootstrap-4-react";
 
 import "./header.css";
 
-const Header = () => {
+const Header = (props) => {
+  const { handleChange } = props;
   return (
     <Navbar className="navbar">
       <div className="navbar-wrapper">
@@ -15,6 +16,7 @@ const Header = () => {
               placeholder="Search"
               mr="sm-2"
               className="navbar-input"
+              onChange={handleChange}
             />
           </Form>
         </div>

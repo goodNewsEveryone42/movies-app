@@ -14,6 +14,14 @@ export default class ImdbService {
     return movies;
   }
 
+  async getSearch(query) {
+    const requests = await axios.get(
+      `http://www.omdbapi.com/?s=${query}${this._key}`
+    );
+    console.log(requests.data.Search);
+    return requests.data.Search;
+  }
+
   _serializeResponse = (response) => {
     return response.reduce((acc, response) => {
       return [...acc, { ...response.data }];

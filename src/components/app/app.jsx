@@ -14,10 +14,18 @@ const App = () => {
     imdbService.getResource().then((res) => setMovies(res));
   }, []);
 
+  const handleChange = (e) => {
+    e.preventDefault();
+    const query = e.target.value;
+    imdbService.getSearch(query).then((res) => setMovies(res));
+    if (query === "") {
+      imdbService.getResource().then((res) => setMovies(res));
+    }
+  };
+
   return (
     <div className="app-container">
-      <div></div>
-      <Header />
+      <Header handleChange={handleChange} />
       <MoviesList movieList={movies} />
     </div>
   );
