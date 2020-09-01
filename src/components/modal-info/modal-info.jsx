@@ -29,7 +29,7 @@ const ModalInfo = (props) => {
     return (
       <tr key={Math.random()}>
         <td>{key}</td>
-        <td>{value}</td>
+        <td>{value || "Information not found"}</td>
       </tr>
     );
   });

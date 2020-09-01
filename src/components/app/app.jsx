@@ -17,10 +17,10 @@ const App = () => {
   const handleChange = (e) => {
     e.preventDefault();
     const query = e.target.value;
-    imdbService.getSearch(query).then((res) => setMovies(res));
     if (query === "") {
       imdbService.getResource().then((res) => setMovies(res));
     }
+    imdbService.getSearch(query).then((res) => setMovies(res));
   };
 
   return (

@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
   background-color: #000000;
 }
 
@@ -17,6 +17,7 @@
 
 .navbar-wrapper__title {
   font-size: 20px;
+  margin-right: 20px;
   color: #ffffff;
 }
 
@@ -33,7 +34,6 @@
     width: 74%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .navbar-form-wrapper {

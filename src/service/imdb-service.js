@@ -6,7 +6,7 @@ export default class ImdbService {
 
   async getResource() {
     const requests = IDs.map((id) =>
-      axios.get(`http://www.omdbapi.com/?i=${id}${this._key}`)
+      axios.get(`https://www.omdbapi.com/?i=${id}${this._key}`)
     );
     const response = await Promise.all(requests);
     const movies = this._serializeResponse(response);
@@ -16,7 +16,7 @@ export default class ImdbService {
 
   async getSearch(query) {
     const requests = await axios.get(
-      `http://www.omdbapi.com/?s=${query}${this._key}`
+      `https://www.omdbapi.com/?s=${query}${this._key}`
     );
     console.log(requests.data.Search);
     return requests.data.Search;
